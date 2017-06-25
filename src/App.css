@@ -521,7 +521,8 @@ button, .button {
   background-color: #F1F2F2;
   padding: 0.5em 0;
   box-shadow: 0 2px 5px 0 rgba(35, 31, 32, 0.4);
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2.5em; }
   .header__branding img {
     width: 100%;
     max-width: 100px; }
@@ -662,7 +663,7 @@ button, .button {
     .contentBox__container:after {
       clear: both; }
   .contentBox + .contentBox {
-    margin-top: 2.5em; }
+    margin-top: 1.875em; }
   .contentBox--highlight .contentBox__container {
     border-color: #550066; }
   .contentBox--alert {
