@@ -1,0 +1,21 @@
+.noticeBar {
+    @include grid-column(12);
+    margin-bottom: 10px;
+
+    &__container {
+        background-color: $c-red;
+        color: $c-white;
+        padding: 5px 40px;
+
+    }
+
+    &__status {
+        @extend h2;
+    }
+
+    &__message {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
