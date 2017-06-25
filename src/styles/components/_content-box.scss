@@ -10,6 +10,13 @@
         margin-top: 2.5em;
     }
 
+    &--alert {
+        background-color: $c-grey--light;
+        .contentBox__container {
+            border: 1px solid $c-red;
+        }
+    }
+
     @include grid-media($neat-medium-grid) {
         &--half {
             @include grid-column(6);
