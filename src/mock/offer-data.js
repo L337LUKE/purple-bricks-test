@@ -38,3 +38,10 @@ export const buyer = {
         }
     ]
 };
+
+
+export const buyerOffer = {
+    amount: 179000,
+    dateMade: '24/10/2013',
+    timeMade: '20:17'
+};
