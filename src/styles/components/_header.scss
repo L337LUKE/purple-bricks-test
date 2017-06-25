@@ -1,0 +1,10 @@
+.header {
+
+    &__branding {
+        @include grid-column(6 of 12);
+    }
+
+    &__heading {
+        @include grid-column(6 of 12);
+    }
+}
