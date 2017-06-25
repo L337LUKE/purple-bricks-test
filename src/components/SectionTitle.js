@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SectionTitle = ({title = '', status = ''}) => (
+const SectionTitle = ({ title = '', status = '', collapsable = false}) => (
     <header className={`sectionTitle ${status ? 'sectionTitle--'+status : ''}`}>
         <h2 className="sectionTitle__title">{title}</h2>
         <hr/>

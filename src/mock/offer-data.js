@@ -11,14 +11,30 @@ export const property = {
         {
             name: "Extra one",
             price: 200
-        },
-        {
+        }, {
             name: "Extra two",
             price: 300
-        },
-        {
+        }, {
             name: "Extra Three",
             price: 400
+        }
+    ]
+};
+
+export const buyer = {
+    details:[
+        {
+            descriptor: 'Name',
+            value: 'Mr David Shepherd'
+        }, {
+            descriptor: 'Buying position',
+            value: 'Property to sell - 20 weeks on the market'
+        }, {
+            descriptor: 'Financial Position',
+            value: 'Mortgate required - approved'
+        }, {
+            descriptor: 'Timescale',
+            value: 'would like to move in 10 weeks - no chain'
         }
     ]
 };

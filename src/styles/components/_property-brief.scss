@@ -1,6 +1,4 @@
 .propertyInfo {
-    @include grid-container();
-    @include grid-collapse();
 
     &__image {
         text-align: center;
@@ -24,6 +22,11 @@
         }
     }
 
+    &__pricing {
+        text-align: right;
+        margin-top: 1em;
+    }
+
     &__askingPrice {
         margin-top: 0;
         margin-bottom: 5px;
@@ -37,6 +40,9 @@
     }
 
     @include grid-media($neat-small-grid) {
+        &__overview {
+            @include clearfix();
+        }
 
         &__image, &__name {
             text-align: left;
@@ -56,6 +62,14 @@
     }
 
     @include grid-media($neat-medium-grid) {
+        @include grid-container();
+        @include grid-collapse();
+
+
+        &__pricing {
+            margin-top: 0;
+        }
+
         &__overview {
             @include grid-column(6 of 12);
         }

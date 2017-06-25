@@ -4,11 +4,17 @@
     &__container {
         @include clearfix();
         border: 1px solid $c-grey;
-        padding: 1.875em 2.5em;
+        padding: 1.25em 0.625em;
     }
 
     & + .contentBox {
         margin-top: 2.5em;
+    }
+
+    &--highlight {
+        .contentBox__container {
+            border-color: $c-darkPurple;
+        }
     }
 
     &--alert {
@@ -18,7 +24,14 @@
         }
     }
 
+    @include grid-media($neat-small-grid) {
+        &__container {
+            padding: 1.875em 2.5em;
+        }
+    }
+
     @include grid-media($neat-medium-grid) {
+
         &--half {
             @include grid-column(6);
         }

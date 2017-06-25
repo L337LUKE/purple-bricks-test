@@ -7,8 +7,9 @@ import ContentBox from '../components/ContentBox';
 import NoticeBar from '../components/NoticeBar';
 import SectionTitle from '../components/SectionTitle';
 import PropertyInfo from '../components/PropertyInfo';
+import BuyerInfo from '../components/BuyerInfo';
 
-import { property } from '../mock/offer-data';
+import { property, buyer } from '../mock/offer-data';
 
 class Offer extends Component {
 
@@ -17,13 +18,14 @@ class Offer extends Component {
             <Container>
                 <NoticeBar status="alert" message="Withdrawn" />
 
-                <ContentBox>
+                <ContentBox status="highlight">
                     <SectionTitle title="The Property" />
                     <PropertyInfo details={property} />
                 </ContentBox>
 
                 <ContentBox uniqueClassName="buyerDetails">
                     <SectionTitle title="Buyer's Details" />
+                    <BuyerInfo buyer={buyer} />
                 </ContentBox>
 
                 <ContentBox width="half" uniqueClassName="buyerOffer">
