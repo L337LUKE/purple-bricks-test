@@ -1,0 +1,11 @@
+.dateAndTime {
+    font-size: 0.875em;
+    color: $c-darkPurple;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+
+    span + span {
+        margin-left: 1em;
+    }
+}

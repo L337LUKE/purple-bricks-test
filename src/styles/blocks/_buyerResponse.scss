@@ -1,19 +1,10 @@
-.buyerOffer {
-    &__price {
-        @extend h1;
+.buyerResponse {
+    &__title {
         font-family: 'arial';
+        color: $c-red;
+        margin-top: 0;
+        margin-bottom: 0.5em;
         font-weight: 600;
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    &__qualify {
-        display: block;
-        margin-bottom: 1.25em;
-    }
-
-    &__comments {
-
     }
 
     @include grid-media($neat-large-grid) {

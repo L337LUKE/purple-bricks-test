@@ -5,6 +5,7 @@
         @include clearfix();
         border: 1px solid $c-grey;
         padding: 1.25em 0.625em;
+        min-height: 230px;
     }
 
     & + .contentBox {

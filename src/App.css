@@ -656,7 +656,8 @@ button, .button {
   .contentBox__container {
     zoom: 1;
     border: 1px solid #AAAAAA;
-    padding: 1.25em 0.625em; }
+    padding: 1.25em 0.625em;
+    min-height: 230px; }
     .contentBox__container:before, .contentBox__container:after {
       content: '';
       display: table; }
@@ -680,7 +681,7 @@ button, .button {
       margin-left: 2.5em; } }
 
 .sectionTitle {
-  margin-bottom: 1.5625em; }
+  margin-bottom: 1.25em; }
   .sectionTitle__title {
     color: #550066;
     margin-bottom: 3px;
@@ -690,6 +691,15 @@ button, .button {
     margin-bottom: 0; }
   .sectionTitle--alert .sectionTitle__title {
     color: #ED1C24; }
+
+.dateAndTime {
+  font-size: 0.875em;
+  color: #550066;
+  display: block;
+  width: 100%;
+  margin-top: 10px; }
+  .dateAndTime span + span {
+    margin-left: 1em; }
 
 .propertyInfo__image {
   text-align: center; }
@@ -770,17 +780,23 @@ button, .button {
   display: block;
   margin-bottom: 1.25em; }
 
-.buyerOffer__dateTime {
-  font-size: 0.875em;
-  color: #550066;
-  display: block;
-  width: 100%;
-  margin-top: 10px; }
-  .buyerOffer__dateTime span + span {
-    margin-left: 1em; }
+@media only screen and (min-width: 64em) {
+  .buyerOffer__dateAndTime {
+    float: right;
+    margin-top: 10px;
+    text-align: right;
+    width: auto;
+    display: inline-block; } }
+
+.buyerResponse__title {
+  font-family: 'arial';
+  color: #ED1C24;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 600; }
 
 @media only screen and (min-width: 64em) {
-  .buyerOffer__dateTime {
+  .buyerResponse__dateAndTime {
     float: right;
     margin-top: 10px;
     text-align: right;

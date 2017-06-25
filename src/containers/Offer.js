@@ -9,11 +9,11 @@ import SectionTitle from '../components/SectionTitle';
 import PropertyInfo from '../components/PropertyInfo';
 import BuyerInfo from '../components/BuyerInfo';
 import BuyerOffer from '../components/BuyerOffer';
+import BuyerResponse from '../components/BuyerResponse';
 
-import { property, buyer, buyerOffer } from '../mock/offer-data';
+import { property, buyer, buyerOffer, buyerResponse } from '../mock/offer-data';
 
 class Offer extends Component {
-
     render() {
         return (
             <Container>
@@ -36,6 +36,7 @@ class Offer extends Component {
 
                 <ContentBox status="alert" width="half" uniqueClassName="buyerResponse">
                     <SectionTitle title="Your Response" status="alert" />
+                    <BuyerResponse offer={buyerResponse} />
                 </ContentBox>
 
                 <ContentBox uniqueClassName="buyerNegotiations">

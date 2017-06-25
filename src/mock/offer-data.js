@@ -45,3 +45,8 @@ export const buyerOffer = {
     dateMade: '24/10/2013',
     timeMade: '20:17'
 };
+
+export const buyerResponse = {
+    dateMade: '24/10/2013',
+    timeMade: '21:05'
+};
