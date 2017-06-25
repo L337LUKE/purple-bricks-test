@@ -50,3 +50,8 @@ export const buyerResponse = {
     dateMade: '24/10/2013',
     timeMade: '21:05'
 };
+
+export const negotiator = {
+    hasAgent: true,
+    agentName: 'Robert White'
+};

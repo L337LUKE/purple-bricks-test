@@ -10,8 +10,9 @@ import PropertyInfo from '../components/PropertyInfo';
 import BuyerInfo from '../components/BuyerInfo';
 import BuyerOffer from '../components/BuyerOffer';
 import BuyerResponse from '../components/BuyerResponse';
+import Negotiations from '../components/Negotiations';
 
-import { property, buyer, buyerOffer, buyerResponse } from '../mock/offer-data';
+import { property, buyer, buyerOffer, buyerResponse, negotiator } from '../mock/offer-data';
 
 class Offer extends Component {
     render() {
@@ -39,8 +40,9 @@ class Offer extends Component {
                     <BuyerResponse offer={buyerResponse} />
                 </ContentBox>
 
-                <ContentBox uniqueClassName="buyerNegotiations">
+                <ContentBox uniqueClassName="buyerNegotiations" status="highlight">
                     <SectionTitle title="Re-open negotiations" />
+                    <Negotiations defaultPrice={0} negotiator={negotiator} />
                 </ContentBox>
             </Container>
         );

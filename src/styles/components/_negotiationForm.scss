@@ -1,0 +1,28 @@
+.reNegotiationForm {
+    &__heading {
+        padding-left: 40px;
+    }
+
+    &__form {
+
+    }
+
+    &__row {
+        @include clearfix();
+        padding-left: 40px;
+    }
+
+    .priceInput {
+        float: left;
+    }
+
+    &__submit {
+        @extend %button-large;
+        @extend %button-action;
+        float: right;
+    }
+
+    &__comments {
+
+    }
+}

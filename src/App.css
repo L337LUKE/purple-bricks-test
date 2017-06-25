@@ -470,7 +470,7 @@ button, .button {
   background: #AAAAAA;
   color: #FFFFFF;
   border: 1px solid #AAAAAA;
-  padding: 0.4em 10px 0.3em 10px;
+  padding: 0.3em 10px 0.1em 10px;
   margin: 0;
   font-size: 0.875em;
   line-height: 1.333333333;
@@ -488,6 +488,25 @@ button, .button {
     background: #C8C8C8;
     opacity: 0.6;
     cursor: not-allowed; }
+
+.reNegotiationForm__submit {
+  font-size: 1.25em; }
+
+.thirdPartyNegotiate__submit {
+  background-color: #990099;
+  border-color: #990099; }
+  .thirdPartyNegotiate__submit:hover, .thirdPartyNegotiate__submit:focus {
+    background-color: #550066;
+    border-color: #990099;
+    color: #FFFFFF; }
+
+.reNegotiationForm__submit {
+  background-color: #00AEEF;
+  border-color: #00AEEF; }
+  .reNegotiationForm__submit:hover, .reNegotiationForm__submit:focus {
+    background-color: #0089bc;
+    border-color: #00AEEF;
+    color: #FFFFFF; }
 
 .container {
   max-width: 68.75rem;
@@ -663,6 +682,8 @@ button, .button {
       display: table; }
     .contentBox__container:after {
       clear: both; }
+  .contentBox .contentBox .contentBox__container {
+    min-height: 0; }
   .contentBox + .contentBox {
     margin-top: 1.875em; }
   .contentBox--highlight .contentBox__container {
@@ -671,10 +692,23 @@ button, .button {
     background-color: #F1F2F2; }
     .contentBox--alert .contentBox__container {
       border: 1px solid #ED1C24; }
+  .contentBox:last-of-type {
+    margin-bottom: 10em; }
   @media only screen and (min-width: 31.25em) {
     .contentBox__container {
-      padding: 1.875em 2.5em; } }
+      padding: 1.875em 2.5em; }
+    .contentBox .contentBox .contentBox__container {
+      min-height: 0;
+      padding: 1em 1.5625em; } }
   @media only screen and (min-width: 50em) {
+    .contentBox .contentBox .contentBox__container {
+      margin-left: -2.5em;
+      margin-right: -2.5em;
+      width: calc(100% + 5em); }
+      .contentBox .contentBox .contentBox__container::after {
+        clear: both;
+        content: "";
+        display: block; }
     .contentBox--half {
       width: calc(50% - 3.75em);
       float: left;
@@ -769,6 +803,55 @@ button, .button {
       float: left;
       margin-left: 2.5em;
       text-align: right; } }
+
+.thirdPartyNegotiate {
+  zoom: 1;
+  text-align: center;
+  padding: 0.5em 10px;
+  margin-top: 1.5625em;
+  border: 1px solid #AAAAAA; }
+  .thirdPartyNegotiate:before, .thirdPartyNegotiate:after {
+    content: '';
+    display: table; }
+  .thirdPartyNegotiate:after {
+    clear: both; }
+  .thirdPartyNegotiate__info {
+    font-weight: 600;
+    color: #550066;
+    max-width: 300px;
+    margin: 0 auto; }
+  .thirdPartyNegotiate__submission {
+    padding: 1.2em 0; }
+  @media only screen and (min-width: 50em) {
+    .thirdPartyNegotiate {
+      padding: 0; }
+      .thirdPartyNegotiate__info, .thirdPartyNegotiate__submission {
+        width: calc(50% - 3.75em);
+        float: left;
+        margin-left: 2.5em; }
+      .thirdPartyNegotiate__info {
+        text-align: left;
+        max-width: 100%; }
+      .thirdPartyNegotiate__submission {
+        text-align: right; } }
+
+.reNegotiationForm__heading {
+  padding-left: 40px; }
+
+.reNegotiationForm__row {
+  zoom: 1;
+  padding-left: 40px; }
+  .reNegotiationForm__row:before, .reNegotiationForm__row:after {
+    content: '';
+    display: table; }
+  .reNegotiationForm__row:after {
+    clear: both; }
+
+.reNegotiationForm .priceInput {
+  float: left; }
+
+.reNegotiationForm__submit {
+  float: right; }
 
 .buyerOffer__price {
   font-family: 'arial';
