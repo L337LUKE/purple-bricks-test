@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import Price from './Price';
+
 const PropertyBrief = ({
    details = {},
 }) => {
@@ -19,7 +22,7 @@ const PropertyBrief = ({
             </div>
             <div className="propertyInfo__pricing">
                 <p className="propertyInfo__askingPrice">Asking Price:</p>
-                <h3 className="propertyInfo__price">{price}</h3>
+                <h3 className="propertyInfo__price"><Price value={price} /></h3>
                 <button className="propertyInfo__offers">View Extras Included</button>
             </div>
         </article>
