@@ -499,3 +499,47 @@ h3 {
 
 .footer {
   background-color: #545353; }
+  .footer__container::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .footer__socialLinks {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; }
+
+.socialLinks {
+  list-style: none;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0; }
+  .socialLinks__item {
+    display: inline-block; }
+    .socialLinks__item + .socialLinks__item {
+      margin-left: 6px; }
+  .socialLinks__screenReader {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden; }
+  .socialLinks__icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-size: cover; }
+    .socialLinks__icon--twitter {
+      background-position: 0 35px; }
+    .socialLinks__icon--facebook {
+      background-position: 140px 35px; }
+    .socialLinks__icon--youtube {
+      background-position: 105px 35px; }
+    .socialLinks__icon--pinterest {
+      background-position: 70px 35px; }
+    .socialLinks__icon--googleplus {
+      background-position: 35px 35px; }

@@ -1,4 +1,13 @@
 .footer {
     background-color: $c-grey--dark;
+
+    &__container {
+        @include grid-container();
+    }
+
+
+    &__socialLinks {
+        @include grid-column(6 of 12);
+    }
 }
 
