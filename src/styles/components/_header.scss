@@ -1,7 +1,13 @@
 .header {
+    @include grid-container();
+    background-color: $c-grey--light;
 
     &__branding {
         @include grid-column(6 of 12);
+
+        img {
+            max-width: 200px;
+        }
     }
 
     &__heading {
