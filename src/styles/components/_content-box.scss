@@ -1,0 +1,18 @@
+.contentBox {
+    @include grid-column(12);
+
+    &__container {
+        border: 1px solid $c-grey;
+        padding: 0 2.5em;
+    }
+
+    & + .contentBox {
+        margin-top: 2.5em;
+    }
+
+    @include grid-media($neat-medium-grid) {
+        &--half {
+            @include grid-column(6);
+        }
+    }
+}
