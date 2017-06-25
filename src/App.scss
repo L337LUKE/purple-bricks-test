@@ -2,3 +2,8 @@
 @import "bourbon/app/assets/stylesheets/bourbon";
 @import "bourbon-neat/core/neat";
 @import "node-normalize-scss/normalize";
+
+// Globals
+@import "styles/mixins";
+@import "styles/variables";
+@import "styles/globals";
