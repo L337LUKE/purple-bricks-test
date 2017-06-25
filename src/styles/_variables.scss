@@ -2,7 +2,7 @@
 // Sizing
 //------------------------------//
 
-$max-container-width: 68.75em;
+$max-container-width: 68.75rem;
 
 //------------------------------//
 // Colours
@@ -19,15 +19,18 @@ $c-grey--dark: #545353;
 // Brand Colours
 $c-lightPurple: #990099;
 $c-darkPurple: #550066;
+
+// Other
 $c-blue: #00AEEF;
+$c-red: #ED1C24;
 
 //------------------------------//
 // Breakpoints
 //------------------------------//
 
-$bp-small: 500px;
-$bp-medium: 800px;
-$bp-large: 1200px;
+$bp-small: 31.25em;
+$bp-medium: 50em;
+$bp-large: 75em;
 
 // This variable map is used for the font-size mixin
 $breakpoints: (
@@ -38,25 +41,32 @@ $breakpoints: (
 
 $neat-grid: (
     columns: 12,
-    gutter: 20px,
+    gutter: 2.5em,
 );
 
 $neat-small-grid: (
     columns: 12,
-    gutter: 20px,
+    gutter: 2.5em,
     media: $bp-small
 );
 
 $neat-medium-grid: (
     columns: 12,
-    gutter: 20px,
+    gutter: 2.5em,
     media: $bp-medium,
 );
 
 $neat-large-grid: (
     columns: 12,
-    gutter: 20px,
+    gutter: 2.5em,
     media: $bp-large,
+);
+
+// Increases gutters
+$neat-medium-spaced-grid: (
+    columns: 12,
+    gutter: 2.5em,
+    media: $bp-medium,
 );
 
 //------------------------------//
