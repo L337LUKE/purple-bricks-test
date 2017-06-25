@@ -1,3 +1,4 @@
 .container {
+    @include clearfix();
     @include outer-container();
 }
