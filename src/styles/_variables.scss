@@ -1,4 +1,19 @@
 //------------------------------//
+// Breakpoints
+//------------------------------//
+
+$bp-small: 500px;
+$bp-medium: 800px;
+$bp-large: 1200px;
+
+// This variable map is used for the font-size mixin
+$breakpoints: (
+    small: $bp-small,
+    medium: $bp-medium,
+    large: $bp-large,
+);
+
+//------------------------------//
 // Typography
 //------------------------------//
 $font-family: 'Source Sans Pro', sans-serif;
@@ -10,34 +25,23 @@ $base-line-height: 1.2;
 $base-font-size: 1em;
 
 $h1-font-sizes: (
-    null: (1.136363636em, 1.1),
-    small: (1.363636364em, 1.4),
-    medium: (2.272727273em, 1.2),
-    large: (3.636363636em, 1.3),
-    xl : (3.636363636em, 1.3)
+    null: (1.75em, 1.2),
+    small: (1.75em, 1.2),
+    medium: (1.75em, 1.2),
+    large: (1.75em, 1.2),
 );
 
 
 $h2-font-sizes: (
-    null: (1em, 1.15),
-    small: (1.136363636em, 1.05),
-    medium: (1.363636364em, 1.05),
-    large: (1.818181818em, 1),
-    xl : (2.272727273em, 0.93)
+    null: (1.75em, 1.2),
+    small: (1.75em, 1.2),
+    medium: (1.75em, 1.2),
+    large: (1.75em, 1.2),
 );
 
 $h3-font-sizes: (
-    null: (0.909090909em, 1.3),
-    small: (1.136363636em, 1.2),
-    medium: (1.363636364em, 1.1),
-    large: (1.590909091em, 1),
-    xl : (1.818181818em, 1)
-);
-
-$h5-font-sizes: (
-    null: (0.9em, 1.1),
-    small: (1em, 1.15),
-    medium: (1.045454545em, 1.1),
-    large: (1.136363636em, 1.1),
-    xl : (1.363636364em, 1)
+    null: (1.375em, 1.2),
+    small: (1.375em, 1.2),
+    medium: (1.375em, 1.2),
+    large: (1.375em, 1.2),
 );
