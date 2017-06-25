@@ -35,6 +35,29 @@ $breakpoints: (
     large: $bp-large,
 );
 
+$neat-grid: (
+    columns: 12,
+    gutter: 20px,
+);
+
+$neat-small-grid: (
+    columns: 12,
+    gutter: 20px,
+    media: $bp-small
+);
+
+$neat-medium-grid: (
+    columns: 12,
+    gutter: 20px,
+    media: $bp-medium,
+);
+
+$neat-large-grid: (
+    columns: 12,
+    gutter: 20px,
+    media: $bp-large,
+);
+
 //------------------------------//
 // Typography
 //------------------------------//
@@ -47,9 +70,9 @@ $base-line-height: 1.2;
 $base-font-size: 1em;
 
 $h1-font-sizes: (
-    null: (1.75em, 1.2),
-    small: (1.75em, 1.2),
-    medium: (1.75em, 1.2),
+    null: (1.25em, 1.2),
+    small: (1.5em, 1.2),
+    medium: (1.625em, 1.2),
     large: (1.75em, 1.2),
 );
 
@@ -58,7 +81,7 @@ $h2-font-sizes: (
     null: (1.75em, 1.2),
     small: (1.75em, 1.2),
     medium: (1.75em, 1.2),
-    large: (1.75em, 1.2),
+    large: (1.75em, 1.2)
 );
 
 $h3-font-sizes: (

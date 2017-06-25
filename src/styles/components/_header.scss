@@ -1,24 +1,42 @@
 .header {
     @include grid-container();
     background-color: $c-grey--light;
-    padding: 1em 0;
+    padding: 0.5em 0;
     box-shadow: 0 2px 5px 0 rgba($c-black, 0.4);
+    text-align: center;
 
     &__branding {
-        @include grid-column(6 of 12);
-
         img {
-            max-width: 200px;
+            width: 100%;
+            max-width: 100px;
         }
     }
 
     &__heading {
-        @include grid-column(6 of 12);
-
         h1 {
             margin: 0;
-            text-align: right;
             color: $c-darkPurple;
+        }
+    }
+
+    @include grid-media($neat-small-grid) {
+        text-align: left;
+
+        &__branding, &__heading { @include grid-column(6 of 12); }
+
+        &__branding img { max-width: 200px; }
+
+        &__heading {
+            text-align: right;
+            margin-top: 20px;
+        }
+    }
+
+    @include grid-media($neat-medium-grid) {
+        padding: 1em 0;
+
+        &__heading {
+            text-align: right;
             margin-top: 45px;
         }
     }
