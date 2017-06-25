@@ -8,6 +8,9 @@
 @import "styles/variables";
 @import "styles/globals";
 
+// blocks
+@import "styles/blocks/propertyInfo";
+
 // Components
 @import "styles/components/header";
 @import "styles/components/footer";
@@ -16,3 +19,4 @@
 @import "styles/components/noticeBar";
 @import "styles/components/content-box";
 @import "styles/components/section-title";
+@import "styles/components/property-brief";

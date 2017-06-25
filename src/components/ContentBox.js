@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContentBox = ({ width = '', status = '',  children }) => (
-    <section className={`contentBox ${width ? 'contentBox--'+width : ''} ${status ? 'contentBox--'+status : ''}` }>
+const ContentBox = ({
+    width = '',
+    status = '',
+    uniqueClassName = '',
+    children
+}) => (
+    <section className={`contentBox ${width ? 'contentBox--'+width : ''} ${status ? 'contentBox--'+status : ''} ${uniqueClassName} `}>
         <div className="contentBox__container">
             {children && children}
         </div>
@@ -10,6 +15,7 @@ const ContentBox = ({ width = '', status = '',  children }) => (
 );
 
 ContentBox.propTypes = {
+    uniqueClassName: PropTypes.string,
     status: PropTypes.string,
     width: PropTypes.string,
     children: PropTypes.node.isRequired

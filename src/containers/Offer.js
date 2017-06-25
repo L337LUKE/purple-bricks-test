@@ -6,8 +6,12 @@ import Container from '../components/Container';
 import ContentBox from '../components/ContentBox';
 import NoticeBar from '../components/NoticeBar';
 import SectionTitle from '../components/SectionTitle';
+import PropertyInfo from '../components/PropertyInfo';
+
+import { property } from '../mock/offer-data';
 
 class Offer extends Component {
+
     render() {
         return (
             <Container>
@@ -15,21 +19,22 @@ class Offer extends Component {
 
                 <ContentBox>
                     <SectionTitle title="The Property" />
+                    <PropertyInfo details={property} />
                 </ContentBox>
 
-                <ContentBox>
+                <ContentBox uniqueClassName="buyerDetails">
                     <SectionTitle title="Buyer's Details" />
                 </ContentBox>
 
-                <ContentBox width="half">
+                <ContentBox width="half" uniqueClassName="buyerOffer">
                     <SectionTitle title="Buyers Offer" />
                 </ContentBox>
 
-                <ContentBox status="alert" width="half" >
+                <ContentBox status="alert" width="half" uniqueClassName="buyerResponse">
                     <SectionTitle title="Your Response" status="alert" />
                 </ContentBox>
 
-                <ContentBox>
+                <ContentBox uniqueClassName="buyerNegotiations">
                     <SectionTitle title="Re-open negotiations" />
                 </ContentBox>
             </Container>

@@ -398,6 +398,12 @@ template {
  * Clearfix
  */
 html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
   font-size: 100%; }
 
 body {
@@ -420,19 +426,19 @@ h1 {
       font-size: 1.75em;
       line-height: 1.2; } }
 
-h2, .noticeBar__status {
+h2, .noticeBar__status, .propertyInfo__price {
   font-size: 1.75em;
   line-height: 1.2; }
   @media screen and (min-width: 31.25em) {
-    h2, .noticeBar__status {
+    h2, .noticeBar__status, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
   @media screen and (min-width: 50em) {
-    h2, .noticeBar__status {
+    h2, .noticeBar__status, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
   @media screen and (min-width: 75em) {
-    h2, .noticeBar__status {
+    h2, .noticeBar__status, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
 
@@ -597,8 +603,14 @@ h3 {
   float: left;
   margin-left: 2.5em; }
   .contentBox__container {
+    zoom: 1;
     border: 1px solid #AAAAAA;
-    padding: 0 2.5em; }
+    padding: 1.875em 2.5em; }
+    .contentBox__container:before, .contentBox__container:after {
+      content: '';
+      display: table; }
+    .contentBox__container:after {
+      clear: both; }
   .contentBox + .contentBox {
     margin-top: 2.5em; }
   .contentBox--alert {
@@ -615,9 +627,61 @@ h3 {
   margin-bottom: 1.875em; }
   .sectionTitle__title {
     color: #550066;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 0; }
   .sectionTitle hr {
     margin-top: 0;
     margin-bottom: 0; }
   .sectionTitle--alert .sectionTitle__title {
     color: #ED1C24; }
+
+.propertyInfo {
+  margin-left: -2.5em;
+  margin-right: -2.5em;
+  width: calc(100% + 5em); }
+  .propertyInfo::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .propertyInfo__image {
+    text-align: center; }
+    .propertyInfo__image img {
+      max-width: 100%;
+      height: auto; }
+  .propertyInfo__name {
+    margin-top: 1em;
+    text-align: center; }
+    .propertyInfo__name p {
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 600;
+      color: #550066; }
+  .propertyInfo__askingPrice {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  .propertyInfo__price {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #550066; }
+  @media only screen and (min-width: 31.25em) {
+    .propertyInfo__image, .propertyInfo__name {
+      text-align: left; }
+    .propertyInfo__image {
+      float: left;
+      width: 25%; }
+    .propertyInfo__name {
+      margin-top: 0;
+      padding-left: 5%;
+      float: left;
+      width: 75%; } }
+  @media only screen and (min-width: 50em) {
+    .propertyInfo__overview {
+      width: calc(50% - 3.75em);
+      float: left;
+      margin-left: 2.5em; }
+    .propertyInfo__pricing {
+      width: calc(50% - 3.75em);
+      float: left;
+      margin-left: 2.5em;
+      text-align: right; } }
