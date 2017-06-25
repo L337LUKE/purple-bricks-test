@@ -1,5 +1,4 @@
 .header {
-    @include grid-container();
     background-color: $c-grey--light;
     padding: 0.5em 0;
     box-shadow: 0 2px 5px 0 rgba($c-black, 0.4);
@@ -20,6 +19,12 @@
     }
 
     @include grid-media($neat-small-grid) {
+
+        &__wrap {
+            @include grid-container();
+            @include grid-collapse();
+        }
+
         text-align: left;
 
         &__branding, &__heading { @include grid-column(6 of 12); }
