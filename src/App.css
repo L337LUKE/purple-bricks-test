@@ -570,7 +570,8 @@ input[type=text] {
   margin-bottom: 2.5em; }
   .header__branding img {
     width: 100%;
-    max-width: 100px; }
+    max-width: 100px;
+    height: auto; }
   .header__heading h1, .header__heading .buyerOffer__price {
     margin: 0;
     color: #550066; }
@@ -928,7 +929,7 @@ input[type=text] {
 
 @media only screen and (min-width: 31.25em) {
   .reNegotiationForm__form {
-    text-align: initial; }
+    text-align: left; }
   .reNegotiationForm .priceInput {
     float: left;
     width: 50%; }

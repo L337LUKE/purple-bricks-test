@@ -8,7 +8,7 @@ const PropertyBrief = ({
    details = {},
 }) => {
 
-    const { image, name, price, extras } = details;
+    const { image, name, price } = details;
 
     return (
         <article className="propertyInfo">

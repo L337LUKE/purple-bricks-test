@@ -41,7 +41,7 @@
 
     @include grid-media($neat-small-grid) {
         &__form {
-            text-align: initial;
+            text-align: left;
         }
 
         .priceInput {
