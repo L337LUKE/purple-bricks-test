@@ -1,21 +1,28 @@
 .contentBox {
-    @include grid-column(12);
+    @include grid-column(12, $neat-small-grid);
 
     &__container {
         @include clearfix();
         border: 1px solid $c-grey;
-        padding: 1.25em 0.625em;
+        padding: 1.25em;
         min-height: 230px;
     }
 
-    .contentBox .contentBox__container { min-height: 0; }
+    .contentBox .contentBox__container {
+        min-height: 0;
+    }
 
-    & + .contentBox { margin-top: 1.875em; }
+    & + .contentBox {
+        margin-top: 1.875em;
+    }
 
-    &--highlight .contentBox__container { border-color: $c-darkPurple; }
+    &--highlight .contentBox__container {
+        border-color: $c-darkPurple;
+    }
 
     &--alert {
         background-color: $c-grey--light;
+
         .contentBox__container {
             border: 1px solid $c-red;
         }
@@ -26,6 +33,9 @@
     }
 
     @include grid-media($neat-small-grid) {
+        // Uses the medium grid with larger gutters
+        @include grid-column(12, $neat-medium-grid);
+
         &__container {
             padding: 1.875em 2.5em;
         }
@@ -37,14 +47,11 @@
     }
 
     @include grid-media($neat-medium-grid) {
-
         .contentBox .contentBox__container {
             @include grid-container();
             @include grid-collapse();
         }
 
-        &--half {
-            @include grid-column(6);
-        }
+        &--half { @include grid-column(6); }
     }
 }
