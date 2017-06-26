@@ -4,7 +4,7 @@
     &__container {
         @include clearfix();
         border: 1px solid $c-grey;
-        padding: 1.25em;
+        padding: 1em;
         min-height: 230px;
     }
 
@@ -37,7 +37,7 @@
         @include grid-column(12, $neat-medium-grid);
 
         &__container {
-            padding: 1.875em 2.5em;
+            padding: 1.875em 1.25em;
         }
 
         .contentBox .contentBox__container {
@@ -50,6 +50,10 @@
         .contentBox .contentBox__container {
             @include grid-container();
             @include grid-collapse();
+        }
+
+        &__container {
+            padding: 1.875em 2.5em;
         }
 
         &--half { @include grid-column(6); }
