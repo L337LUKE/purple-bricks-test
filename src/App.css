@@ -426,35 +426,35 @@ h1, .buyerOffer__price {
       font-size: 1.75em;
       line-height: 1.2; } }
 
-h2, .noticeBar__status, .propertyInfo__price {
+h2, .propertyInfo__price {
   font-size: 1.75em;
   line-height: 1.2; }
   @media screen and (min-width: 31.25em) {
-    h2, .noticeBar__status, .propertyInfo__price {
+    h2, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
   @media screen and (min-width: 50em) {
-    h2, .noticeBar__status, .propertyInfo__price {
+    h2, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
   @media screen and (min-width: 64em) {
-    h2, .noticeBar__status, .propertyInfo__price {
+    h2, .propertyInfo__price {
       font-size: 1.75em;
       line-height: 1.2; } }
 
-h3 {
+h3, .noticeBar__message {
   font-size: 1.375em;
   line-height: 1.2; }
   @media screen and (min-width: 31.25em) {
-    h3 {
+    h3, .noticeBar__message {
       font-size: 1.375em;
       line-height: 1.2; } }
   @media screen and (min-width: 50em) {
-    h3 {
+    h3, .noticeBar__message {
       font-size: 1.375em;
       line-height: 1.2; } }
   @media screen and (min-width: 64em) {
-    h3 {
+    h3, .noticeBar__message {
       font-size: 1.375em;
       line-height: 1.2; } }
 
@@ -716,6 +716,8 @@ input[type=text] {
     background-color: #ED1C24;
     color: #FFFFFF;
     padding: 5px 20px; }
+  .noticeBar__status {
+    font-weight: bold; }
   .noticeBar__message {
     margin-top: 0;
     margin-bottom: 0; }
@@ -726,7 +728,7 @@ input[type=text] {
       margin-left: 2.5em; } }
   @media only screen and (min-width: 50em) {
     .noticeBar__container {
-      padding: 5px 40px; } }
+      padding: 5px 40px 7px 40px; } }
 
 .contentBox {
   width: calc(100% - 2.5em);
@@ -962,8 +964,8 @@ input[type=text] {
     width: 30%; } }
 
 .accordion__toggle {
-  margin-top: 8px;
-  float: right;
+  text-align: center;
+  display: block;
   cursor: pointer;
   user-select: none; }
   .accordion__toggle span {
@@ -980,6 +982,14 @@ input[type=text] {
 .accordion--hide {
   height: 0;
   overflow: hidden; }
+
+@media only screen and (min-width: 31.25em) {
+  .accordion__toggle {
+    margin-top: 8px;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    width: auto; } }
 
 .accordion__toggle--hide span:after {
   background-position: -60px 0; }

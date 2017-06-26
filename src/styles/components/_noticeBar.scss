@@ -9,10 +9,11 @@
     }
 
     &__status {
-        @extend h2;
+        font-weight: bold;
     }
 
     &__message {
+        @extend h3;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -23,7 +24,7 @@
 
     @include grid-media($neat-medium-grid) {
         &__container {
-            padding: 5px 40px;
+            padding: 5px 40px 7px 40px;
         }
     }
 }

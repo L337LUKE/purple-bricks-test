@@ -1,7 +1,7 @@
 .accordion {
     &__toggle {
-        margin-top: 8px;
-        float: right;
+        text-align: center;
+        display: block;
         cursor: pointer;
         user-select: none;
 
@@ -23,6 +23,16 @@
     &--hide {
         height: 0;
         overflow: hidden;
+    }
+
+    @include grid-media($neat-small-grid) {
+        &__toggle {
+            margin-top: 8px;
+            display: inline-block;
+            float: right;
+            text-align: right;
+            width: auto;
+        }
     }
 }
 
