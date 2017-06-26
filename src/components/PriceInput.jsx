@@ -8,8 +8,8 @@ const PriceInput = ({ defaultValue }) => (
     </div>    
 );
 
-PriceInput.propTypes = {
-    defaultValue: PropTypes.number.isRequired
-};
+// PriceInput.propTypes = {
+    // defaultValue: PropTypes.isRequired
+// };
 
 export default PriceInput;
