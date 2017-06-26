@@ -5,7 +5,7 @@ import NumberFormat from 'react-number-format';
 class PriceInput extends Component {
     render() {
 
-        let { defaultValue, updateTotal } = this.props;
+        let { defaultValue, updateTotal, showError } = this.props;
 
         return (
             <div className="priceInput">
@@ -20,6 +20,9 @@ class PriceInput extends Component {
                     allowNegative={false}
                     onChange={(e, value) => updateTotal(Number(value))}
                 />
+                {showError &&
+                    <span className="message message--error">{'Please enter a valid amount'}</span>
+                }
             </div>
         );
     }

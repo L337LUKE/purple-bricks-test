@@ -9,7 +9,7 @@ const ReNegotiations = ({
     negotiator,
     submitForm,
     updateTotal,
-    showMessage
+    showError
 }) => (
     <div className="reNegotiation">
 
@@ -28,16 +28,13 @@ const ReNegotiations = ({
             <h2 className="reNegotiationForm__heading">{'Enter an offer you would be willing to accept'}</h2>
             <div className="reNegotiationForm__form">
                 <div className="reNegotiationForm__row">
-                    <PriceInput defaultValue={defaultPrice} updateTotal={updateTotal} />
+                    <PriceInput defaultValue={defaultPrice} updateTotal={updateTotal} showError={showError} />
                     <button
                         className="reNegotiationForm__submit"
                         onClick={() => submitForm()}
                     >
                         {'Submit Offer'}
                     </button>
-                    {showMessage &&
-                        <span className="message message--error">{'Show Error Message'}</span>
-                    }
                 </div>
                 <div className="reNegotiationForm__row">
                     <button className="reNegotiationForm__comments">{'Add Comments'}</button>

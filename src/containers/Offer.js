@@ -22,7 +22,6 @@ import ContentBox from '../components/ContentBox';
 import BuyerOffer from '../components/BuyerOffer';
 import PropertyInfo from '../components/PropertyInfo';
 import Negotiations from '../components/Negotiations';
-import SectionTitle from '../components/SectionTitle';
 import BuyerResponse from '../components/BuyerResponse';
 
 // Mock Data
@@ -36,24 +35,29 @@ class Offer extends Component {
         // Set our default state
         this.state = {
             negotiatedPrice: buyerOffer.amount,
-            showMessage: false
+            showError: false,
+            accordionShow: true
         }
+    }
+
+    toggleAccordion = () => {
+        this.setState({ accordionShow : !this.state.accordionShow })
     }
 
     submitForm = () => {
         if (this.state.negotiatedPrice <= 0) {
-            this.setState({ showMessage: true });
+            this.setState({ showError: true });
         } else {
-            this.setState({ showMessage: false});
+            this.setState({ showError: false});
             console.log({ negotiatedPrice : this.state.negotiatedPrice });
         }
     }
 
     updateTotal = (value) => {
-        this.setState({ negotiatedPrice: value })
+        this.setState({ negotiatedPrice: value });
 
         if (value) {
-            this.setState({ showMessage: false });
+            this.setState({ showError: false });
         }
     }
 
@@ -63,34 +67,48 @@ class Offer extends Component {
             <Container>
                 <NoticeBar status="alert" message="Withdrawn" />
 
-                <ContentBox status="highlight">
-                    <SectionTitle title="The Property" />
+                <ContentBox status="highlight" title="The Property">
                     <PropertyInfo details={property} />
                 </ContentBox>
 
-                <ContentBox uniqueClassName="buyerDetails">
-                    <SectionTitle title="Buyer's Details" />
+                <ContentBox
+                    uniqueClassName="buyerDetails"
+                    isAccordion={true}
+                    title="Buyer's Details"
+                    toggleAccordion={this.toggleAccordion}
+                    showAccordion={this.state.accordionShow}
+                >
                     <BuyerInfo buyer={buyer} />
                 </ContentBox>
 
-                <ContentBox width="half" uniqueClassName="buyerOffer">
-                    <SectionTitle title="Buyers Offer" />
+                <ContentBox
+                    width="half"
+                    uniqueClassName="buyerOffer"
+                    title="Buyers Offer"
+                >
                     <BuyerOffer offer={buyerOffer} />
                 </ContentBox>
 
-                <ContentBox status="alert" width="half" uniqueClassName="buyerResponse">
-                    <SectionTitle title="Your Response" status="alert" />
+                <ContentBox
+                    status="alert"
+                    width="half"
+                    uniqueClassName="buyerResponse"
+                    title="Your Response"
+                >
                     <BuyerResponse offer={buyerResponse} />
                 </ContentBox>
 
-                <ContentBox uniqueClassName="buyerNegotiations" status="highlight">
-                    <SectionTitle title="Re-open negotiations" />
+                <ContentBox
+                    uniqueClassName="buyerNegotiations"
+                    status="highlight"
+                    title="Re-open negotiations"
+                >
                     <Negotiations
                         defaultPrice={this.state.negotiatedPrice}
                         negotiator={negotiator}
                         submitForm={this.submitForm}
                         updateTotal={this.updateTotal}
-                        showMessage={this.state.showMessage}
+                        showError={this.state.showError}
                     />
                 </ContentBox>
             </Container>
