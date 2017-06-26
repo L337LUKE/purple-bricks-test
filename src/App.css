@@ -933,10 +933,12 @@ input[type=text] {
   .reNegotiationForm .priceInput {
     float: left;
     width: 50%; }
-  .reNegotiationForm__submit {
+  .reNegotiationForm__submission {
+    text-align: right;
     float: right;
     width: 40%;
-    margin-left: 0;
+    margin-left: 0; }
+  .reNegotiationForm__submit {
     font-size: 16px; } }
 
 @media only screen and (min-width: 50em) {
@@ -948,7 +950,7 @@ input[type=text] {
     width: 40%; }
     .reNegotiationForm .priceInput__currency {
       left: -28px; }
-  .reNegotiationForm__submit {
+  .reNegotiationForm__submission {
     width: 30%; }
   .reNegotiationForm__heading, .reNegotiationForm__row {
     padding-left: 40px; }

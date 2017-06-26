@@ -49,10 +49,15 @@
             width: 50%;
         }
 
-        &__submit {
+        &__submission {
+            text-align: right;
             float: right;
             width: 40%;
             margin-left: 0;
+
+        }
+
+        &__submit {
             font-size: 16px;
         }
     }
@@ -71,7 +76,7 @@
             }
         }
 
-        &__submit {
+        &__submission {
             width: 30%;
         }
 

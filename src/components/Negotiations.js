@@ -29,12 +29,14 @@ const ReNegotiations = ({
             <div className="reNegotiationForm__form">
                 <div className="reNegotiationForm__row">
                     <PriceInput defaultValue={defaultPrice} updateTotal={updateTotal} showError={showError} />
-                    <button
-                        className="reNegotiationForm__submit"
-                        onClick={() => submitForm()}
-                    >
-                        {'Submit Offer'}
-                    </button>
+                    <div className="reNegotiationForm__submission">
+                        <button
+                            className="reNegotiationForm__submit"
+                            onClick={() => submitForm()}
+                        >
+                            {'Submit Offer'}
+                        </button>
+                    </div>
                 </div>
                 <div className="reNegotiationForm__row">
                     <button className="reNegotiationForm__comments">{'Add Comments'}</button>
