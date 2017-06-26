@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+
+/**
+ * This component is classed as a HOC (Higher order Component)
+ * I would usually abstract a lot of the logic here into reducer
+ * functions with Redux rather than using Reacts state methods directly
+ *
+ * The functions within the Offer class are passed to the
+ * render method, which in turn are passed as props to the child
+ * components for them to use which affect the state of the HOC,
+ * meaning it can then distribute changes more effectively.
+ *
+ * The aim of the child components is that they are dumb, they just accept props
+ * and show data, they aren't responsible for the logic of the application.
+ */
 
 // Components
 import Container from '../components/Container';
-import ContentBox from '../components/ContentBox';
 import NoticeBar from '../components/NoticeBar';
-import SectionTitle from '../components/SectionTitle';
-import PropertyInfo from '../components/PropertyInfo';
 import BuyerInfo from '../components/BuyerInfo';
+import ContentBox from '../components/ContentBox';
 import BuyerOffer from '../components/BuyerOffer';
-import BuyerResponse from '../components/BuyerResponse';
+import PropertyInfo from '../components/PropertyInfo';
 import Negotiations from '../components/Negotiations';
+import SectionTitle from '../components/SectionTitle';
+import BuyerResponse from '../components/BuyerResponse';
 
+// Mock Data
 import { property, buyer, buyerOffer, buyerResponse, negotiator } from '../mock/offer-data';
 
 class Offer extends Component {
@@ -31,9 +45,8 @@ class Offer extends Component {
             this.setState({ showMessage: true });
         } else {
             this.setState({ showMessage: false});
+            console.log({ negotiatedPrice : this.state.negotiatedPrice });
         }
-
-        console.log(this.state);
     }
 
     updateTotal = (value) => {
