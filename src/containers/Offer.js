@@ -15,6 +15,36 @@ import Negotiations from '../components/Negotiations';
 import { property, buyer, buyerOffer, buyerResponse, negotiator } from '../mock/offer-data';
 
 class Offer extends Component {
+
+    constructor(props) {
+        super();
+
+        // Set our default state
+        this.state = {
+            negotiatedPrice: buyerOffer.amount,
+            showMessage: false
+        }
+    }
+
+    submitForm = () => {
+        if (this.state.negotiatedPrice <= 0) {
+            this.setState({ showMessage: true });
+        } else {
+            this.setState({ showMessage: false});
+        }
+
+        console.log(this.state);
+    }
+
+    updateTotal = (value) => {
+        this.setState({ negotiatedPrice: value })
+
+        if (value) {
+            this.setState({ showMessage: false });
+        }
+    }
+
+
     render() {
         return (
             <Container>
@@ -42,15 +72,17 @@ class Offer extends Component {
 
                 <ContentBox uniqueClassName="buyerNegotiations" status="highlight">
                     <SectionTitle title="Re-open negotiations" />
-                    <Negotiations defaultPrice={0} negotiator={negotiator} />
+                    <Negotiations
+                        defaultPrice={this.state.negotiatedPrice}
+                        negotiator={negotiator}
+                        submitForm={this.submitForm}
+                        updateTotal={this.updateTotal}
+                        showMessage={this.state.showMessage}
+                    />
                 </ContentBox>
             </Container>
         );
     }
 }
-
-// Offer.propTypes = {
-
-// };
 
 export default Offer;

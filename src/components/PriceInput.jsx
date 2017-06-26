@@ -1,15 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import NumberFormat from 'react-number-format';
 
-const PriceInput = ({ defaultValue }) => (
-    <div className="priceInput">
-        <span className="priceInput__currency">£</span>
-        <input className="priceInput__input" type="text" />
-    </div>    
-);
+class PriceInput extends Component {
+    render() {
 
-// PriceInput.propTypes = {
-    // defaultValue: PropTypes.isRequired
-// };
+        let { defaultValue, updateTotal } = this.props;
+
+        return (
+            <div className="priceInput">
+                <span className="priceInput__currency">{'£'}</span>
+                <label htmlFor="negotiatedOffer">{'Your re-negotiated offer'}</label>
+
+                <NumberFormat
+                    id="negotiatedOffer"
+                    name="negotiatedOffer"
+                    className="priceInput__input"
+                    thousandSeparator={true}
+                    value={defaultValue}
+                    allowNegative={false}
+                    onChange={(e, value) => updateTotal(Number(value))}
+                />
+            </div>
+        );
+    }
+};
+
+PriceInput.propTypes = {
+    defaultValue: PropTypes.number.isRequired
+};
 
 export default PriceInput;

@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import ContentBox from './ContentBox';
 import PriceInput from './PriceInput';
 
-const ReNegotiations = ({ defaultPrice, negotiator }) => (
+const ReNegotiations = ({
+    defaultPrice,
+    negotiator,
+    submitForm,
+    updateTotal,
+    showMessage
+}) => (
     <div className="reNegotiation">
+
         {negotiator.hasAgent &&
         <div className="reNegotiation__thirdParty thirdPartyNegotiate">
             <div className="thirdPartyNegotiate__info">
@@ -20,18 +26,24 @@ const ReNegotiations = ({ defaultPrice, negotiator }) => (
 
         <div className="reNegotiation__form reNegotiationForm">
             <h2 className="reNegotiationForm__heading">{'Enter an offer you would be willing to accept'}</h2>
-
             <div className="reNegotiationForm__form">
                 <div className="reNegotiationForm__row">
-                    <PriceInput defaultValue="0" />
-                    <button className="reNegotiationForm__submit">{'Submit Offer'}</button>
+                    <PriceInput defaultValue={defaultPrice} updateTotal={updateTotal} />
+                    <button
+                        className="reNegotiationForm__submit"
+                        onClick={() => submitForm()}
+                    >
+                        {'Submit Offer'}
+                    </button>
+                    {showMessage &&
+                        <span className="message message--error">{'Show Error Message'}</span>
+                    }
                 </div>
                 <div className="reNegotiationForm__row">
                     <button className="reNegotiationForm__comments">{'Add Comments'}</button>
                 </div>
             </div>
         </div>
-
     </div>
 );
 
