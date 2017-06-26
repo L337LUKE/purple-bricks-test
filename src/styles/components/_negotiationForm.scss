@@ -1,4 +1,9 @@
 .reNegotiationForm {
+
+    &__heading {
+        color: $c-darkPurple;
+    }
+
     &__form {
         text-align: center;
     }
@@ -41,7 +46,7 @@
 
         .priceInput {
             float: left;
-            width: 55%;
+            width: 50%;
         }
 
         &__submit {
@@ -58,12 +63,30 @@
             margin-left: 0;
         }
 
+        .priceInput {
+            padding-left: 0em;
+            width: 40%;
+            &__currency {
+                left: -28px;
+            }
+        }
+
+        &__submit {
+            width: 30%;
+        }
+
         &__heading, &__row {
             padding-left: 40px;
         }
 
         &__submit {
             font-size: 20px;
+        }
+    }
+
+    @include grid-media($neat-large-grid) {
+        .priceInput {
+            width: 30%;
         }
     }
 }
