@@ -1,1 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 @import "globals/typography";
+@import "globals/buttons";
+@import "globals/input";
+@import "globals/wrappers";
+@import "globals/info-list";
+@import "globals/messages";

@@ -1,0 +1,61 @@
+.contentBox {
+    @include grid-column(12, $neat-small-grid);
+
+    &__container {
+        @include clearfix();
+        border: 1px solid $c-grey;
+        padding: 1em;
+    }
+
+    & + .contentBox {
+        margin-top: 1.875em;
+    }
+
+    &--highlight .contentBox__container {
+        border-color: $c-darkPurple;
+    }
+
+    &--alert {
+        background-color: $c-grey--light;
+
+        .contentBox__container {
+            border: 1px solid $c-red;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 10em;
+    }
+
+    @include grid-media($neat-small-grid) {
+        // Uses the medium grid with larger gutters
+        @include grid-column(12, $neat-medium-grid);
+
+        &__container {
+            padding: 1.875em 1.25em;
+        }
+
+        .contentBox .contentBox__container {
+            padding: 1em 1.5625em;
+        }
+    }
+
+    @include grid-media($neat-medium-grid) {
+        .contentBox .contentBox__container {
+            @include grid-container();
+            @include grid-collapse();
+        }
+
+        &__container {
+            padding: 1.875em 2.5em;
+        }
+
+        &--half {
+            @include grid-column(6);
+
+            .contentBox__container {
+                min-height: 230px;
+            }
+        }
+    }
+}

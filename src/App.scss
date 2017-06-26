@@ -7,3 +7,23 @@
 @import "styles/mixins";
 @import "styles/variables";
 @import "styles/globals";
+
+// Components
+@import "styles/components/header";
+@import "styles/components/footer";
+@import "styles/components/price-input";
+@import "styles/components/social-links";
+@import "styles/components/link-list";
+@import "styles/components/noticeBar";
+@import "styles/components/content-box";
+@import "styles/components/section-title";
+@import "styles/components/dateAndTime";
+@import "styles/components/property-brief";
+@import "styles/components/third-part-negotiate";
+@import "styles/components/negotiationForm";
+@import "styles/components/accordion";
+
+// blocks
+@import "styles/blocks/propertyInfo";
+@import "styles/blocks/buyerOffer";
+@import "styles/blocks/buyerResponse";

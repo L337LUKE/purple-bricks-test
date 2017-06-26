@@ -1,0 +1,38 @@
+$iconSize: 35px;
+
+.socialLinks {
+    list-style: none;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    &__item {
+        display: inline-block;
+
+        & + & {
+            margin-left: 6px;
+        }
+    }
+
+    &__link {
+    }
+
+    &__screenReader {
+        @include visually-hide();
+    }
+
+    &__icon {
+        display: inline-block;
+        width: $iconSize;
+        height: $iconSize;
+        background-size: cover;
+
+        &--twitter      { background-position: 0 $iconSize; }
+        &--facebook     { background-position: ($iconSize * 4) $iconSize; }
+        &--youtube      { background-position: ($iconSize * 3)  $iconSize; }
+        &--pinterest    { background-position: ($iconSize * 2)  $iconSize; }
+        &--googleplus   { background-position: ($iconSize * 1)  $iconSize; }
+    }
+}
+

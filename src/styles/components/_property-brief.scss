@@ -1,0 +1,82 @@
+.propertyInfo {
+
+    &__image {
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__name {
+        margin-top: 1em;
+        text-align: center;
+
+        p {
+            font-size: 1.25em;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: $c-darkPurple;
+        }
+    }
+
+    &__pricing {
+        text-align: right;
+        margin-top: 1em;
+    }
+
+    &__askingPrice {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        @extend h2;
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: $c-darkPurple;
+    }
+
+    @include grid-media($neat-small-grid) {
+        &__overview {
+            @include clearfix();
+        }
+
+        &__image, &__name {
+            text-align: left;
+        }
+
+        &__image {
+            float: left;
+            width: 25%;
+        }
+
+        &__name {
+            margin-top: 0;
+            padding-left: 5%;
+            float: left;
+            width: 75%;
+        }
+    }
+
+    @include grid-media($neat-medium-grid) {
+        @include grid-container();
+        @include grid-collapse();
+
+
+        &__pricing {
+            margin-top: 0;
+        }
+
+        &__overview {
+            @include grid-column(6 of 12);
+        }
+
+        &__pricing {
+            @include grid-column(6 of 12);
+            text-align: right;
+        }
+    }
+}

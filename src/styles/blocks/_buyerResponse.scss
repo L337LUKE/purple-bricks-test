@@ -1,0 +1,19 @@
+.buyerResponse {
+    &__title {
+        font-family: 'arial';
+        color: $c-red;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+    }
+
+    @include grid-media($neat-large-grid) {
+        &__dateAndTime {
+            float: right;
+            margin-top: 10px;
+            text-align: right;
+            width: auto;
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.header {
+    background-color: $c-grey--light;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 5px 0 rgba($c-black, 0.4);
+    text-align: center;
+    margin-bottom: 2.5em;
+
+    &__branding {
+        img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+        }
+    }
+
+    &__heading {
+        h1 {
+            margin: 0;
+            color: $c-darkPurple;
+        }
+    }
+
+    @include grid-media($neat-small-grid) {
+
+        &__wrap {
+            @include grid-container();
+            @include grid-collapse();
+        }
+
+        text-align: left;
+
+        &__branding, &__heading { @include grid-column(6 of 12); }
+
+        &__branding img { max-width: 200px; }
+
+        &__heading {
+            text-align: right;
+            margin-top: 20px;
+        }
+    }
+
+    @include grid-media($neat-medium-grid) {
+        padding: 1em 0;
+
+        &__heading {
+            text-align: right;
+            margin-top: 45px;
+        }
+    }
+}

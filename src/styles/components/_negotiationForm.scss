@@ -1,0 +1,97 @@
+.reNegotiationForm {
+
+    &__heading {
+        color: $c-darkPurple;
+    }
+
+    &__form {
+        text-align: center;
+    }
+
+    &__row {
+        @include clearfix();
+
+        & + & {
+            margin-top: 16px;
+        }
+    }
+
+    .priceInput {
+        padding-left: 1.5em;
+        margin-bottom: 0.5em;
+
+        &__currency {
+            left: -3px;
+        }
+
+        &__input {
+            max-width: 97%;
+        }
+    }
+
+    &__submit {
+        @extend %button-large;
+        @extend %button-action;
+        width: 100%;
+    }
+
+    &__comments {
+        @extend %button-branded;
+    }
+
+    @include grid-media($neat-small-grid) {
+        &__form {
+            text-align: left;
+        }
+
+        .priceInput {
+            float: left;
+            width: 50%;
+        }
+
+        &__submission {
+            text-align: right;
+            float: right;
+            width: 40%;
+            margin-left: 0;
+
+        }
+
+        &__submit {
+            font-size: 16px;
+        }
+    }
+
+    @include grid-media($neat-medium-grid) {
+        &__priceInput, &__submit {
+            width: auto;
+            margin-left: 0;
+        }
+
+        .priceInput {
+            padding-left: 0em;
+            width: 40%;
+            &__currency {
+                left: -28px;
+            }
+        }
+
+        &__submission {
+            width: 30%;
+        }
+
+        &__heading, &__row {
+            padding-left: 40px;
+        }
+
+        &__submit {
+            font-size: 20px;
+        }
+    }
+
+    @include grid-media($neat-large-grid) {
+        .priceInput {
+            width: 30%;
+        }
+    }
+}

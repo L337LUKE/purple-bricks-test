@@ -1,0 +1,21 @@
+.sectionTitle {
+    margin-bottom: 1.25em;
+
+    &__title {
+        color: $c-darkPurple;
+        margin-bottom: 3px;
+        margin-top: 0;
+        display: inline-block;
+    }
+
+    hr {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &--alert {
+        .sectionTitle__title {
+            color: $c-red;
+        }
+    }
+}

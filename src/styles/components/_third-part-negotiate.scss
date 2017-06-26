@@ -1,0 +1,39 @@
+.thirdPartyNegotiate {
+    @include clearfix();
+    text-align: center;
+    padding: 0.5em 10px;
+    margin-top: 1.5625em;
+    border: 1px solid $c-grey;
+
+    &__info {
+        font-weight: 600;
+        color: $c-darkPurple;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    &__submission {
+        padding: 1.2em 0;
+    }
+
+    &__submit {
+        @extend %button-branded;
+    }
+
+    @include grid-media($neat-medium-grid) {
+        padding: 0;
+
+        &__info, &__submission {
+            @include grid-column(6);
+        }
+
+        &__info {
+            text-align: left;
+            max-width: 100%;
+        }
+
+        &__submission {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.buyerOffer {
+    &__price {
+        @extend h1;
+        font-family: 'arial';
+        font-weight: 600;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &__qualify {
+        display: block;
+        margin-bottom: 1.25em;
+    }
+
+    &__comments {
+
+    }
+
+    @include grid-media($neat-large-grid) {
+        &__dateAndTime {
+            float: right;
+            margin-top: 10px;
+            text-align: right;
+            width: auto;
+            display: inline-block;
+        }
+    }
+}
