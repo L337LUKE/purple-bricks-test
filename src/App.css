@@ -979,10 +979,10 @@ input[type=text] {
   overflow: hidden; }
 
 .accordion__toggle--hide span:after {
-  background-position: 0 0; }
+  background-position: -60px 0; }
 
 .accordion__toggle--show span:after {
-  background-position: -60px 0; }
+  background-position: 0 0; }
 
 .buyerOffer__price {
   font-family: 'arial';
