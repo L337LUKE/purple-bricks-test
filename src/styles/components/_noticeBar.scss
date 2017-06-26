@@ -1,12 +1,11 @@
 .noticeBar {
-    @include grid-column(12);
+    @include grid-column(12, $neat-small-grid);
     margin-bottom: 10px;
 
     &__container {
         background-color: $c-red;
         color: $c-white;
-        padding: 5px 40px;
-
+        padding: 5px 20px;
     }
 
     &__status {
@@ -18,4 +17,13 @@
         margin-bottom: 0;
     }
 
+    @include grid-media($neat-small-grid) {
+        @include grid-column(12, $neat-medium-grid);
+    }
+
+    @include grid-media($neat-medium-grid) {
+        &__container {
+            padding: 5px 40px;
+        }
+    }
 }
