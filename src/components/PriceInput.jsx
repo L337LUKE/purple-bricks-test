@@ -10,8 +10,7 @@ class PriceInput extends Component {
         return (
             <div className="priceInput">
                 <span className="priceInput__currency">{'£'}</span>
-                <label htmlFor="negotiatedOffer">{'Your re-negotiated offer'}</label>
-
+                <label className="priceInput__label priceInput__label--a11yHide" htmlFor="negotiatedOffer">{'Your re-negotiated offer'}</label>
                 <NumberFormat
                     id="negotiatedOffer"
                     name="negotiatedOffer"

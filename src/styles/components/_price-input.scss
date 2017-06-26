@@ -11,6 +11,12 @@
         color: $c-grey;
     }
 
+    &__label {
+        &--a11yHide {
+            @include visually-hide();
+        }
+    }
+
     &__input {
 
     }
